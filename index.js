@@ -5,8 +5,21 @@
 // -----------------------------------------------------
 // TASK 1: People in Space API
 // API: People in Space (Open Notify)
-//
+
+let requestUrl = "http://api.open-notify.org/astros.json"
+
 // 1. Create a function called fetchPeopleInSpace.
+
+async function fetchPeopleInSpace(url){
+     const response = await fetch(url);
+    const data = await response.json();
+    console.log(data)
+    return data
+}
+
+
+fetchPeopleInSpace(requestUrl)
+
 // 2. Look up the documentation for the "People in Space" API.
 // 3. Write a fetch request to get a list of people currently in space.
 // 4. Convert the response to JSON.
@@ -21,6 +34,8 @@
 // -----------------------------------------------------
 // TASK 2: NASA Astronomy Picture of the Day (APOD)
 // API: NASA APOD
+
+let requestUrl2 = ""
 //
 // 1. Create a function called fetchAPOD.
 // 2. Read the documentation for the APOD API on api.nasa.gov.
